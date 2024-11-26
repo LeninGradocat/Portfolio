@@ -222,7 +222,7 @@ header {
     }
 }
 
-#CarouselCOntainer:hover #Carousel {
+#CarouselContainer:hover #Carousel {
     animation-play-state: paused;
 }
 
