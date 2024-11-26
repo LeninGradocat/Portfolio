@@ -1,0 +1,223 @@
+/* Estilos generales para el sitio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Estilos para los bloques de contenido */
+.content-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el texto en el bloque de contenido */
+.content-block .text {
+    flex: 1; 
+    padding-right: 20px; 
+}
+
+/* Estilos para la imagen en el bloque de contenido */
+.content-block .image img {
+    width: 250px; 
+    height: auto;
+    border-radius: 5px;
+}
+
+#idiomas {
+    width: 15px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#Logo img {
+    height: 50px;
+}
+
+#NavBarTitle h1 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+#List nav ul {
+    list-style-type: none;
+}
+
+#List nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#List nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#List nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección principal */
+#freelancerText {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    border-right: 3px solid #333; /* Cursor tipo "text input" */
+    padding-right: 5px;
+    white-space: nowrap; /* Para evitar que el texto se parta */
+    overflow: hidden; /* Oculta lo que se escribe fuera del contenedor */
+}
+
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: #333; }
+    100% { border-color: transparent; }
+}
+
+#freelancerText.blinking {
+    animation: blink 0.7s step-end infinite;
+}
+
+.social-icons a img {
+    width: 40px; /* Tamaño base del icono */
+    height: 40px; /* Tamaño base del icono */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% */
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#Main {
+    padding: 20px;
+}
+
+#MainTitle1, #MainTitle2 {
+    margin-bottom: 10px;
+}
+
+#MainContent1, #MainContent2 {
+    margin-bottom: 20px;
+}
+
+#MainContent1 p, #MainContent2 p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilos para las imágenes */
+#MainImage1, #MainImage2 {
+    margin-bottom: 20px;
+    height: 300px;
+    background-color: #ccc;
+}
+
+/* Agregar espacio entre secciones */
+#freelancerText, #MainTitle1, #MainContent1, #MainImage1,
+#MainTitle2, #MainContent2, #MainImage2 {
+    margin-bottom: 20px;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.sections {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}

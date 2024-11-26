@@ -1,0 +1,279 @@
+/* Estilos generales para el sitio */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+/* --- ENCABEZADO --- */
+
+header {
+    background-color: #0b4246;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    justify-items: flex-start;
+    width: 100%;
+}
+
+/* --- IMAGEN DE ENCABEZADO (OPCIONAL) --- */
+
+#Logo {
+    align-items: center;
+    background: transparent;
+}
+
+#Logo img{
+    width: 90px;
+    background: transparent;
+}
+ 
+ /* --- TITULOS EN ENCABEZADO --- */
+
+#titulo {
+    font-size: 30px;
+    font-weight: bold;
+    color: aquamarine;
+    text-align: center;
+}
+
+.section-titulos {
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: aquamarine;
+    font-weight: bold;
+}
+
+#navbartitle h1 {
+    font-size: 25px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    overflow: visible;
+    opacity: 1;
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-transform: uppercase;
+}
+
+
+
+/* --- Estilos para los bloques de contenido en ventana --- */
+#main {
+    margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.content-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px; /* Add margin-bottom to create separation between content blocks */
+}
+
+.content-block img {
+    flex: 1;
+    max-width: 250px; /* --- Para cambiar de tamaño su imagen de perfil, modifique este parametro --8 */
+    margin-left: 40px; 
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- REDES SOCIALES ICONS --- */
+
+.social-icons {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+    background-color: transparent; /* Set the background color to transparent */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 80px; /* Add margin-bottom to create separation between language section and adjacent blocks */
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.language-list span {
+    font-weight: bold;
+    color: #333;
+    min-width: 80px;
+}
+
+.language-bar {
+    width: 100%;
+    flex: 1;
+    height: 10px;
+    gap: 5px;
+    background-color: #6d6969;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    max-width: 250px; /* --- Para cambiar el ancho de las barras, modifique este parametro --- */
+}
+
+.language-bar .progress {
+    height: 100%;
+    background-color: #f69708; /* Color del nivel */
+    border-radius: 20px;
+    width: var(--progress-width);
+    animation: grow 1s ease-in-out forwards;
+    transition: width 0.3s ease; /* Animación para suavidad */
+}
+
+.language-bar .progress {
+    animation: grow 1s ease-in-out;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+/* Carrete de imagenes */
+
+#CarouselContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#Carousel {
+    display: flex;
+    animation: slideAnimation 10s linear reverse infinite;
+    transition: transform 0.8s ease;
+}
+
+#Carousel .Slide {
+    flex: 0 0 100%;
+}
+
+#Carousel .Slide img {
+    width: 50%;
+    height: auto;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#CarouselCOntainer:hover #Carousel {
+    animation-play-state: paused;
+}
+
+/* --- BLOQUE D CONTACTO --- */
+
+#ContactForm {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#ContactForm h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px; 
+}
+
+#ContactForm input,
+#ContactForm textarea{
+    font-size: 14px;
+    border-radius: 5px;
+    width: 200px;
+    height: 24px;
+}
+
+#ContactForm input[type="submit"] {
+    background-color:#0b4246;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#ContactForm input[type="submit"]:hover {
+    background-color: #989797;
+}
+
+/* Estilos para las imágenes */
+img {
+    max-width: 100%; /* Nunca será más grande que su contenedor */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacios blancos alrededor de la imagen */
+}
+
+#Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    width: 100%;
+}
