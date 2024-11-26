@@ -35,6 +35,6 @@ socialIcons.forEach((icon) => {
 
     icon.addEventListener('mouseleave', () => {
         icon.dataset.hovering = 'false'; // Detener la animación
-        icon.style.transform = 'scale(1)'; // Resetear el tamaño al normal
+        icon.style.transform = 'scale(0)'; // Resetear el tamaño al normal
     });
 });

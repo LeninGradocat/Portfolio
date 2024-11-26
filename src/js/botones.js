@@ -1,42 +1,45 @@
 const carousel = document.getElementById('Carousel');
-const slides = document.getElementById('.Slide');
+const slides = document.querySelectorAll('.Slide');
 const prevBtn = document.getElementById('prevBtn');
 const nxtBtn = document.getElementById('nxtBtn');
 
-const slideWidth = slides[0].offsetWidth;  // Ancho de cada slide
-let currentIndex = 0;
+let currentIndex = 0; // Índice actual del slide
+const slideCount = slides.length;
+const slideInterval = 3000; // Tiempo en pantalla por slide (3 segundos)
 
-function moveCarousel(direction) {
-    const currentTransform = getComputedStyle(carousel).transform;
-    const currentTranslateX = currentTransform === 'none' ? 0 : parseFloat(currentTransform.split(',')[4]);
-
-    const newTranslateX = currentTranslateX + direction * slideWidth;
-
-    if (newTranslateX > 0) {
-        carousel.style.transition = 'none';
-        carousel.style.transform = `translateX(-${slideWidth * (slides.length - 1)}px)`;
-        setTimeout(() => {
-            carousel.style.transition = 'transform 0.5s ease';
-            carousel.style.transform = `translateX(-${slideWidth * (slides.length - 1)}px)`;
-        }, 50);
-    } else if (newTranslateX < -slideWidth * (slides.length - 1)) {
-        carousel.style.transition = 'none';
-        carousel.style.transform = `translateX(0)`;
-        setTimeout(() => {
-            carousel.style.transition = 'transform 0.5s ease';
-            carousel.style.transform = `translateX(0)`;
-        }, 50);
-    } else {
-        carousel.style.transform = `translateX(${newTranslateX}px)`;
-    }
+// Función para mover el carrusel
+function moveToSlide(index) {
+    currentIndex = (index + slideCount) % slideCount; // Asegura que el índice sea circular
+    const offset = -currentIndex * 100; // Calcular desplazamiento
+    carousel.style.transform = `translateX(${offset}%)`;
 }
 
-prevBtn.addEventListener('click', () => moveCarousel(1));
-nextBtn.addEventListener('click', () => moveCarousel(-1));
+// Mover automáticamente
+let autoSlide = setInterval(() => {
+    moveToSlide(currentIndex + 1);
+}, 3000);
 
-carousel.addEventListener('mouseenter', () => {
-    carousel.style.animationPlayState = 'paused';
+// Función para reiniciar el temporizador del carrusel automático
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => {
+        moveToSlide(currentIndex + 1);
+    }, slideInterval);
+}
+
+// Botones de navegación
+prevBtn.addEventListener('click', () => {
+    moveToSlide(currentIndex - 1);
 });
+
+nxtBtn.addEventListener('click', () => {
+    moveToSlide(currentIndex + 1);
+});
+
+// Pausar al pasar el ratón
+carousel.addEventListener('mouseenter', () => clearInterval(autoSlide));
 carousel.addEventListener('mouseleave', () => {
-    carousel.style.animationPlayState = 'running';
+    autoSlide = setInterval(() => {
+        moveToSlide(currentIndex + 1);
+    }, 3000);
 });
