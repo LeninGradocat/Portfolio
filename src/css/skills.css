@@ -228,3 +228,96 @@ ul {
 		.header_menu a:hover {
 			color: #837c9a;
 		}
+	
+.footer_name {
+	font-style: italic;
+	margin-top: 20px;
+}
+
+/* Profile Content */
+
+.profile_quote {
+	position: relative;
+	/* margin-left: 5px; */
+}
+	.profile_quote p {
+		font-size: 17px;
+		width: 455px;
+	}
+	.profile_quote  .entypo-quote {
+		color: #232b31;
+		font-size: 80px;
+    font-style: normal;
+		position: absolute;
+		top: -20px;
+		right: 70px;
+		cursor: default;
+	}
+
+.philosophy_content {
+	margin-top: 20px;
+}
+	.philosophy_content p {
+		margin: 0;
+		width: 370px;
+		float: left;
+	}
+	.philosophy_content ul {
+		float: left;
+		padding-left: 40px;
+	}
+
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 80px; /* Add margin-bottom to create separation between language section and adjacent blocks */
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.language-list span {
+    font-weight: bold;
+    color: #333;
+    min-width: 80px;
+}
+
+.language-bar {
+    width: 100%;
+    flex: 1;
+    height: 10px;
+    gap: 5px;
+    background-color: #6d6969;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    max-width: 250px; /* --- Para cambiar el ancho de las barras, modifique este parametro --- */
+}
+
+.language-bar .progress {
+    height: 100%;
+    background-color: #c5b30b; /* Color del nivel */
+    border-radius: 20px;
+    width: var(--progress-width);
+    animation: grow 1s ease-in-out forwards;
+    transition: width 0.3s ease; /* Animación para suavidad */
+}
+
+.language-bar .progress {
+    animation: grow 1.5s ease-in-out;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
