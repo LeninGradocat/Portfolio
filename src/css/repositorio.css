@@ -93,7 +93,7 @@
 /* Main tags */
 
 body {
-	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+	background: url(../images/y-so-serious-white.png) repeat;
 	margin: 0;
 }
 
@@ -103,19 +103,19 @@ h1,h2,h3, h4 {
 	color: #48DA9B;
 }
 	h1 {
-		font-size: 48px;
+		font-size: 50px;
 		font-weight: 300;
 		margin: 20px 0;
 	}
 	h2 {
-		font-size: 28px;
+		font-size: 32px;
 		margin: 32px 0 24px;
 	}
 	h3 {
 		font-size: 24px;
 	}
 	h4 {
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: 400;
 	}
 
@@ -129,8 +129,8 @@ blockquote {
 blockquote, p , a, li {
 	font-family: 'Lato', Helvetica, sans-serif;
 	font-weight: 300;
-	font-size: 15px;
-	color: #e4e3e8;
+	font-size: 17px;
+	color: #76817a;
 }
 
 a:focus { 
@@ -226,5 +226,18 @@ ul {
 		border-left: none;
 	}
 		.header_menu a:hover {
-			color: #837c9a;
+			color: #86cab6;
+			font-weight: bold;
 		}
+
+
+#left_nav h2 {
+	margin: 0;
+	font-size: 24px;
+}
+
+.footer_name {
+	font-style: italic;
+	margin-top: 20px;
+}
+		

@@ -14,7 +14,7 @@
 	clear: both;
 }
 .purple {
-	color: #837c9a;
+	color: #073520;
 }
 
 .block {
@@ -26,7 +26,6 @@
 	}
 
 .last.block {
-    margin-left: -5px;
     margin-bottom: 25px;
 }
 
@@ -93,7 +92,7 @@
 /* Main tags */
 
 body {
-	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+	background: url(../images/y-so-serious-white.png) repeat;
 	margin: 0;
 }
 
@@ -103,19 +102,19 @@ h1,h2,h3, h4 {
 	color: #48DA9B;
 }
 	h1 {
-		font-size: 48px;
+		font-size: 50px;
 		font-weight: 300;
 		margin: 20px 0;
 	}
 	h2 {
-		font-size: 28px;
+		font-size: 30px;
 		margin: 32px 0 24px;
 	}
 	h3 {
 		font-size: 24px;
 	}
 	h4 {
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: 400;
 	}
 
@@ -129,8 +128,8 @@ blockquote {
 blockquote, p , a, li {
 	font-family: 'Lato', Helvetica, sans-serif;
 	font-weight: 300;
-	font-size: 15px;
-	color: #e4e3e8;
+	font-size: 17px;
+	color: #76817a;
 }
 
 a:focus { 
@@ -157,7 +156,7 @@ ul {
 
 #main_container {
 	width: 960px;
-	margin: 0 auto;
+	margin: auto;
 }
 	#header {
 		height: 130px;
@@ -226,7 +225,8 @@ ul {
 		border-left: none;
 	}
 		.header_menu a:hover {
-			color: #837c9a;
+			color: #86cab6;
+			font-weight: bold;
 		}
 	
 /* LEFT NAV */
@@ -268,49 +268,68 @@ ul {
 	margin-top: 25px;
 }
 
-.get_social_content {
-	margin-top: 15px;
+.get_social_content { 
+	margin-top: 15px; 
+} 
+
+.get_social_content h2{ 
+	margin-bottom: 8px; 
+} 
+
+.social_icons { 
+	margin-left: -8px; 
+} 
+
+.social_icons a { 
+	font-size: 35px; 
+	text-decoration: none; 
+	color: #000507; 
+	padding: 0; 
+	padding: 0 5px;
+	transition: 0.5s ease-in-out, color 0.8s ease-in-out;
+} 
+
+.social_icons a span.invisible { 
+	display:none; 
+} 
+
+.social_icons a:hover {
+	border-radius: 50px; 
 }
-  .get_social_content h2{
-    margin-bottom: 8px;
-  }
-	.social_icons {
-		margin-left: -8px;
-	}
-	.social_icons a {
-		font-size: 35px;
-		text-decoration: none;
-		color: #000507;
-		padding: 0;
-		padding: 0 5px;
-	}
-		.social_icons a span.invisible {
-			display:none;
-		}
-        .social_icons .instagram:hover{
-			background: #3b5998;
-			color: #050505;
-			border-top-right-radius: 50px;
-			border-bottom-left-radius: 50px;
-		}
-		.social_icons .github:hover{
-			background: #3b5998;
-			color: #060606;
-			border-top-right-radius: 50px;
-			border-bottom-left-radius: 50px;
-		}
-		.social_icons .twitter:hover{
-			background: #00B0ED;
-			color: #090909;
-			border-top-left-radius: 50px;
-			border-bottom-right-radius: 50px;
-		}
-		.social_icons .linkedin:hover{
-			background: #007bb6;
-			color: #121212;
-			border-top-right-radius: 50px;
-			border-bottom-left-radius: 50px;
-		}
+
+.social_icons .instagram:hover { 
+	background: #f600f6; 
+	color: #ffffff; 
+	border-top-right-radius: 50px; 
+	border-bottom-left-radius: 50px; 
+} 
+
+.social_icons .github:hover { 
+	background: #000000; 
+	color: #ffffff; 
+	border-top-right-radius: 50px; 
+	border-bottom-left-radius: 50px; 
+} 
+
+.social_icons .twitter:hover { 
+	background: #0398c9; 
+	color: #ffffff; 
+	border-top-left-radius: 50px; 
+	border-bottom-right-radius: 50px; 
+} 
+
+.social_icons .linkedin:hover { 
+	background: #010d79; 
+	color: #ffffff; 
+	border-top-right-radius: 50px; 
+	border-bottom-left-radius: 50px; 
+}
+
+/* Permitir transformaciones */ 
+.social_icons i { 
+	display: inline-block; 
+	transition: transform 0.3s ease-in-out; 
+}
 
 .footer_name {
 	font-style: italic;
@@ -337,94 +356,23 @@ ul {
 		cursor: default;
 	}
 
-.philosophy_content {
-	margin-top: 20px;
-}
-	.philosophy_content p {
-		margin: 0;
-		width: 370px;
-		float: left;
-	}
-	.philosophy_content ul {
-		float: left;
-		padding-left: 40px;
-	}
-
-.language-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 80px; /* Add margin-bottom to create separation between language section and adjacent blocks */
-}
-
-.language-item {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.language-list span {
-    font-weight: bold;
-    color: #333;
-    min-width: 80px;
-}
-
-.language-bar {
-    width: 100%;
-    flex: 1;
-    height: 10px;
-    gap: 5px;
-    background-color: #6d6969;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    max-width: 250px; /* --- Para cambiar el ancho de las barras, modifique este parametro --- */
-}
-
-.language-bar .progress {
-    height: 100%;
-    background-color: #c5b30b; /* Color del nivel */
-    border-radius: 20px;
-    width: var(--progress-width);
-    animation: grow 1s ease-in-out forwards;
-    transition: width 0.3s ease; /* Animación para suavidad */
-}
-
-.language-bar .progress {
-    animation: grow 1.5s ease-in-out;
-}
-
-@keyframes grow {
-    from {
-        width: 0;
-    }
-    to {
-        width: var(--progress-width);
-    }
-}
-
 /* Carrete de imagenes */
-#Gallery {
-    position: relative;
-    width: auto;
-    overflow: hidden;
-    padding-bottom: 20px;
-    margin-top: 20px;
+
+.galeria {
+	position: relative;
+	overflow: hidden;
+	width: auto;
+	margin: auto;
 }
 
-#CarouselContainer {
-    position: relative;
-    height: 60vh;
-    margin-bottom: 20px;
-    overflow: hidden;
-    padding: 10px;
+.imagen-container {
+	position: relative;
+	height: fit-content;
+	overflow: hidden;
 }
 
 #Carousel {
     display: flex;
-    transition: transform 1s ease;
     width: 100%;
 }
 
@@ -436,11 +384,14 @@ ul {
 }
 
 #Carousel .Slide img {
-    max-width: 80%;
-    max-height: 80%;
-    margin: auto;
+	max-width: 90%;
+	max-height: 90%;
     object-fit: contain;
     padding: 10px;
+}
+
+#Carousel.paused { 
+	transition: none;
 }
 
 #prevBtn, #nxtBtn {
@@ -451,18 +402,33 @@ ul {
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 16px;
     z-index: 10;
     pointer-events: auto;
+	border-radius: 50%;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#prevBtn::before {
+	content: '\f053';
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+}
+
+#nxtBtn::before {
+	content: '\f054';
+	font-family: "Font Awesome 6 Free"; 
+	font-weight: 900;
 }
 
 #prevBtn {
-    left: 5px;
+	left: 5px;
 }
 
 #nxtBtn {
-    right: 5px;
+	right: 5px;
 }
 
 #prevBtn:hover, #nxtBtn:hover {
@@ -471,38 +437,33 @@ ul {
 
 /* --- BLOQUE D CONTACTO --- */
 
-#ContactForm {
-    z-index: 2;
-    font-size: 14px;
+.contact_form {
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
-#ContactForm h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 8px; 
-}
-
-#ContactForm input,
-#ContactForm textarea{
+.contact_form input,
+.contact_form textarea{
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 200px;
     height: 24px;
 }
 
-#ContactForm input[type="submit"] {
+.contact_form input[type="submit"] {
     background-color:#0b4246;
+	display: flex;
+	margin-top: 12px;
+	margin-left: 2px;
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-#ContactForm input[type="submit"]:hover {
+.contact_form input[type="submit"]:hover {
     background-color: #989797;
+	font-weight: bold;
 }
