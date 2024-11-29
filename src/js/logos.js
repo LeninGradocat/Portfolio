@@ -1,5 +1,4 @@
-// Seleccionamos todos los íconos dentro de los enlaces de los íconos sociales
-const socialIcons = document.querySelectorAll('.social_icons a i');
+const socialIcons = document.querySelectorAll('.social_icons a img');
 
 // Función para iniciar la animación de parpadeo
 function startPulsing(icon) {
@@ -7,16 +6,19 @@ function startPulsing(icon) {
     let growing = true; // Indicador de crecimiento
 
     function pulse() {
+        if (growing) {
+            scale += 0.02; // Incrementar el tamaño
+            if (scale >= 1.4) growing = false; // Cambiar a reducción si llega al límite superior
+        } else {
+            scale -= 0.02; // Reducir el tamaño
+            if (scale <= 1) growing = true; // Cambiar a crecimiento si llega al límite inferior
+        }
+
+        icon.style.transform = `scale(${scale})`;
+
+        // Continuar animando si el cursor sigue encima
         if (icon.dataset.hovering === 'true') {
-            if (growing) {
-                scale += 0.02; // Incrementar el tamaño
-                if (scale >= 1.2) growing = false; // Cambiar a reducción si llega al límite superior
-            } else {
-                scale -= 0.02; // Reducir el tamaño
-                if (scale <= 1) growing = true; // Cambiar a crecimiento si llega al límite inferior
-            }
-            icon.style.transform = `scale(${scale})`;
-            requestAnimationFrame(pulse); // Continuar la animación
+            requestAnimationFrame(pulse);
         }
     }
 

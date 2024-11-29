@@ -294,7 +294,8 @@ ul {
 } 
 
 .social_icons a:hover {
-	border-radius: 50px; 
+	border-radius: 50px;
+	animation: pulse 0.6s infinite; 
 }
 
 .social_icons .instagram:hover { 
@@ -325,7 +326,30 @@ ul {
 	border-bottom-left-radius: 50px; 
 }
 
-/* Permitir transformaciones */ 
+.social_icons a img {
+    transition: transform 0.3s;
+    background-color: transparent; 
+}
+
+.social_icons a img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Clase dinámica para la animación */
+.animate-pulse {
+    animation: pulse 0.6s infinite; /* La animación se repite mientras esté la clase */
+}
+
+
 .social_icons i { 
 	display: inline-block; 
 	transition: transform 0.3s ease-in-out; 
