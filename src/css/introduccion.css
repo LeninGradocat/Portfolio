@@ -277,7 +277,11 @@ ul {
 } 
 
 .social_icons { 
-	margin-left: -8px; 
+	margin-left: -8px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 10px; 
 } 
 
 .social_icons a { 
@@ -289,50 +293,22 @@ ul {
 	transition: 0.5s ease-in-out, color 0.8s ease-in-out;
 } 
 
-.social_icons a span.invisible { 
-	display:none; 
-} 
-
 .social_icons a:hover {
 	border-radius: 50px;
 	animation: pulse 0.6s infinite; 
 }
 
-.social_icons .instagram:hover { 
-	background: #f600f6; 
-	color: #ffffff; 
-	border-top-right-radius: 50px; 
-	border-bottom-left-radius: 50px; 
-} 
-
-.social_icons .github:hover { 
-	background: #000000; 
-	color: #ffffff; 
-	border-top-right-radius: 50px; 
-	border-bottom-left-radius: 50px; 
-} 
-
-.social_icons .twitter:hover { 
-	background: #0398c9; 
-	color: #ffffff; 
-	border-top-left-radius: 50px; 
-	border-bottom-right-radius: 50px; 
-} 
-
-.social_icons .linkedin:hover { 
-	background: #010d79; 
-	color: #ffffff; 
-	border-top-right-radius: 50px; 
-	border-bottom-left-radius: 50px; 
-}
-
 .social_icons a img {
-    transition: transform 0.3s;
-    background-color: transparent; 
+    width: 35px; /* Ajusta el tamaño del ícono */
+    height: 35px; /* Asegúrate de que el tamaño sea uniforme */
+    transition: transform 0.3s, background-color 0.3s; 
+    border-radius: 50%; /* Hace los íconos redondos si es necesario */
+    background-color: transparent;
 }
 
 .social_icons a img:hover {
     transform: scale(1.2);
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 @keyframes pulse {

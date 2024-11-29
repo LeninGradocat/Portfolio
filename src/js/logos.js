@@ -6,6 +6,8 @@ function startPulsing(icon) {
     let growing = true; // Indicador de crecimiento
 
     function pulse() {
+        if (icon.dataset.hovering !== 'true') return; // Detener la animación si no está en hover
+
         if (growing) {
             scale += 0.02; // Incrementar el tamaño
             if (scale >= 1.4) growing = false; // Cambiar a reducción si llega al límite superior
@@ -17,9 +19,7 @@ function startPulsing(icon) {
         icon.style.transform = `scale(${scale})`;
 
         // Continuar animando si el cursor sigue encima
-        if (icon.dataset.hovering === 'true') {
-            requestAnimationFrame(pulse);
-        }
+        requestAnimationFrame(pulse);
     }
 
     pulse();

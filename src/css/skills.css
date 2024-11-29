@@ -14,7 +14,7 @@
 	clear: both;
 }
 .purple {
-	color: #837c9a;
+	color: #073520;
 }
 
 .block {
@@ -93,7 +93,7 @@
 /* Main tags */
 
 body {
-	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+	background: url(../images/y-so-serious-white.png) repeat;
 	margin: 0;
 }
 
@@ -130,7 +130,7 @@ blockquote, p , a, li {
 	font-family: 'Lato', Helvetica, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
-	color: #e4e3e8;
+	color: #76817a;
 }
 
 a:focus { 
