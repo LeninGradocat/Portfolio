@@ -424,7 +424,6 @@ ul {
     cursor: pointer;
     padding: 10px 10px;
     font-size: 16px;
-    z-index: 10;
     pointer-events: auto;
 	border-radius: 50%;
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -457,56 +456,129 @@ ul {
 
 /* --- BLOQUE D CONTACTO --- */
 
-.contact_form {
-    font-size: 15px;
+/* Estilo del botón "Contáctese" */
+#openModalBtn {
+    background-color: #5ce2af; /* Color verde claro */
+    color: white; /* Color del texto */
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transición suave */
+    text-align: center;
+}
+
+#openModalBtn:hover {
+    background-color: #45c097; /* Un verde más oscuro */
+    transform: translateY(-2px); /* Sutil efecto de elevación */
+}
+
+/* Estilo para el botón "Enviar" */
+.form_group input[type="submit"] {
+    background-color: #5ce2af; /* Mismo color que el botón "Contáctese" */
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px; /* Mismos bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.form_group input[type="submit"]:hover {
+    background-color: #45c097; /* Un verde más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Asegura que el modal esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente oscuro */
+    padding-top: 100px; /* Espacio superior para centrar el contenido */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    width: 40%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    animation: fadeIn 0.5s; /* Animación al abrir */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Botón de cierre */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
-    width: 100%; /* Asegura que el formulario ocupe el 100% del ancho disponible dentro de su contenedor */
-    margin: 0 auto; /* Centra el formulario dentro de su contenedor */
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los campos */
+}
+
+.contact_form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .contact_form input,
 .contact_form textarea {
     font-size: 14px;
-    border-radius: 10px;
-    width: 100%; /* Hace que los campos se ajusten al 100% del ancho disponible */
-    max-width: 200px; /* Limita el ancho máximo para los campos */
-    height: 24px;
+    padding: 10px;
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+.contact_form textarea {
+    height: 120px; /* Tamaño mayor para el campo de mensaje */
+    resize: none; /* Impide el cambio de tamaño manual */
 }
 
 .contact_form input[type="submit"] {
-    background-color: #0b4246;
+    background-color: #5ce2af;
     color: white;
+    font-size: 16px;
+    padding: 12px 25px;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: auto; /* El ancho del botón se ajustará al contenido */
-    height: 40px;
-    padding: 0 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact_form input[type="submit"]:hover {
-    background-color: #989797;
-    font-weight: bold;
-}
-
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    flex: 1;
-    min-width: 250px;
-    box-sizing: border-box;
-}
-
-/* Para evitar que el botón se quede debajo, limitamos su tamaño */
-.form-group input[type="submit"] {
-    flex: 0 0 auto;
+    background-color: #45c097; /* Cambia a un verde más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación */
 }

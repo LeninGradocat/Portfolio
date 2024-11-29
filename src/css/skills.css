@@ -321,3 +321,9 @@ ul {
         width: var(--progress-width);
     }
 }
+
+.footer_name {
+	font-style: italic;
+	margin-top: 20px;
+	margin-left: 120px;
+}

@@ -14,7 +14,7 @@
 	clear: both;
 }
 .purple {
-	color: #837c9a;
+	color: #073520;
 }
 
 .block {
@@ -130,7 +130,7 @@ blockquote, p , a, li {
 	font-family: 'Lato', Helvetica, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
-	color: #e4e3e8;
+	color: #76817a;
 }
 
 a:focus { 
@@ -228,3 +228,28 @@ ul {
 		.header_menu a:hover {
 			color: #837c9a;
 		}
+	
+.footer_name {
+	font-style: italic;
+	margin-top: 20px;
+}
+
+/* Profile Content */
+
+.profile_quote {
+	position: relative;
+	/* margin-left: 5px; */
+}
+	.profile_quote p {
+		font-size: 17px;
+		width: 455px;
+	}
+	.profile_quote  .entypo-quote {
+		color: #232b31;
+		font-size: 80px;
+    font-style: normal;
+		position: absolute;
+		top: -20px;
+		right: 70px;
+		cursor: default;
+	}
