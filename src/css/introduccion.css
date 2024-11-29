@@ -101,6 +101,12 @@ h1,h2,h3, h4 {
 	font-weight: 300;
 	color: #48DA9B;
 }
+
+h3, h4 {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 200;
+	color: #48DA9B;
+}
 	h1 {
 		font-size: 50px;
 		font-weight: 300;
@@ -236,19 +242,33 @@ ul {
 	font-size: 24px;
 }
 
-.profile_frame{
-	width: 230px;
-	height: 260px;
-	background: black;
-	border: 1px solid #403F44;
-	margin-top: 30px;
+.profile_frame {
+    width: 230px;
+    height: 260px;
+    background: rgba(0, 201, 84, 0.466);
+    border: none;
+    margin-top: 30px;
+    display: flex; /* Centra la imagen */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Recorta cualquier parte sobrante de la imagen */
 }
-	.profile_picture{
-		width: 210px;
-		height: 240px;
-		margin: 10px;
-		background: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/86033/profile/profile-512_3.jpg) 100% /210px no-repeat;
-	}
+
+.profile_picture {
+    width: 210px;
+    height: 240px;
+    margin: 10px;
+    display: flex; /* Centra el contenido si es necesario */
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_picture img {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al contenedor */
+    object-fit: cover; /* Ajusta la imagen proporcionalmente; puede recortar */
+    object-position: center; /* Centra la imagen si es más grande */
+}
 
 .hello_content,
 .contact_details_content {
@@ -440,30 +460,53 @@ ul {
 .contact_form {
     font-size: 15px;
     font-weight: bold;
+    width: 100%; /* Asegura que el formulario ocupe el 100% del ancho disponible dentro de su contenedor */
+    margin: 0 auto; /* Centra el formulario dentro de su contenedor */
 }
 
 .contact_form input,
-.contact_form textarea{
+.contact_form textarea {
     font-size: 14px;
     border-radius: 10px;
-    width: 200px;
+    width: 100%; /* Hace que los campos se ajusten al 100% del ancho disponible */
+    max-width: 200px; /* Limita el ancho máximo para los campos */
     height: 24px;
 }
 
 .contact_form input[type="submit"] {
-    background-color:#0b4246;
-	display: flex;
-	margin-top: 12px;
-	margin-left: 2px;
+    background-color: #0b4246;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: auto; /* El ancho del botón se ajustará al contenido */
+    height: 40px;
+    padding: 0 20px;
 }
 
 .contact_form input[type="submit"]:hover {
     background-color: #989797;
-	font-weight: bold;
+    font-weight: bold;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+/* Para evitar que el botón se quede debajo, limitamos su tamaño */
+.form-group input[type="submit"] {
+    flex: 0 0 auto;
 }

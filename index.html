@@ -23,7 +23,7 @@
                 <div class="header_menu_container">
                     <div class="clear"></div>
                     <ul class="header_menu horizontal_list">
-                        <li><a class="no_border purple" href="#">Profile</a></li>
+                        <li><a class="no_border purple" href="#">Perfil</a></li>
                         <li><a href="src/html/habilidades.html">Habilidades</a></li> 
                         <li><a href="src/html/proyecto1.html">Proyecto 1</a></li>
                         <li><a href="src/html/proyecto2.html">Proyecto 2</a></li>
@@ -35,7 +35,7 @@
             <div id="left_col">
                 <div class="profile_frame">
                     <div class="profile_picture">
-                    <img src="./src/images/fd87eade9eea82552e96f2eb67f453a5-removebg-preview.png" alt="Imagen de Perfil">
+                    <img src="src/images/20241109_125920.jpg" alt="Imagen de Perfil">
                     </div>
                 </div>
                 <div class="hello_content">
@@ -68,11 +68,11 @@
                             <img src="src/images/linkedin_logo_icon_147268.png" alt="LinkedIn">
                             </a>
                         </li>
-                        <li><a src="https://github.com/LeninGradocat" target="_blank">
+                        <li><a href="https://github.com/LeninGradocat" target="_blank">
                             <img src="src/images/github_logo_icon_145252.png" alt="GitHub">
                             </a>
                         </li>
-                        <li><a href="https://github.com/LeninGradocat" target="_blank">
+                        <li><a href="https://www.instagram.com/leningradito?igsh=ODJxcmpiazFybHF3" target="_blank">
                             <img src="src/images/Instagram_logo_2022.png" alt="Instagram">
                             </a>
                         </li>
@@ -82,7 +82,7 @@
 <!-- CONTENIDO DE LA INTRODUCCION -->
                         <div id="content_container">				
                             <div class="block">
-                              <h1>Perfil</h1>
+                              <h2>Perfil</h2>
                               <blockquote class="profile_quote">
                                 <p>"There is no end to education. It is not that you read a book,
                                      pass an examination, and finish with education. The whole of life,
@@ -176,16 +176,25 @@
                             <div class="last block">
                                 <div class="contact_form">
                                     <h2>Contáctese:</h2>
-                                        <form action="submit_form.php" method="POST" target="_blank">
+                                    <form action="submit_form.php" method="POST" target="_blank" class="form-row">
+                                        <div class="form-group">
                                             <label for="name"><p>Nombre:</p></label>
                                             <input type="text" id="name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="email"><p>Email:</p></label>
-                                            <input type="text" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                                            <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="message"><p>Mensaje:</p></label>
                                             <textarea id="message" name="message" required></textarea>
+                                        </div>
+                                        <div class="form-group">
                                             <input type="submit" value="Enviar">
-                                        </form>
-                                    </div>                                
+                                        </div>
+                                    </form>
+                                </div>
+                                                                
                             </div>
                         <div class="clear"></div>
                         </div>
